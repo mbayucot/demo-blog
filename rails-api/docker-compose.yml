@@ -1,0 +1,35 @@
+version: "3.8"
+
+services:
+  db:
+    image: postgres:12
+    container_name: blog_postgres
+    env_file: .env
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres:/var/lib/postgresql/data
+
+  redis:
+    image: redis:5.0
+    container_name: blog_redis
+    command: redis-server
+    volumes:
+      - redis:/var/lib/redis/data
+
+  web:
+    build: .
+    container_name: blog_api
+    command: bash -c "rm -f tmp/pids/server.pid && /usr/bin/supervisord -n"
+    env_file: .env
+    ports:
+      - "4000:3000"
+    volumes:
+      - .:/api
+    depends_on:
+      - db
+      - redis
+
+volumes:
+  postgres:
+  redis:

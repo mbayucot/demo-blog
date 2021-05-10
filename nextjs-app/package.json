@@ -1,0 +1,49 @@
+{
+  "name": "nextjs-app",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "test": "jest --watchAll",
+    "test:ci": "jest --ci"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@auth0/nextjs-auth0": "^1.0.0",
+    "@charkour/react-reactions": "^0.3.5",
+    "@stripe/stripe-js": "^1.13.0",
+    "@types/qs": "^6.9.5",
+    "@types/react-select": "^4.0.13",
+    "antd": "^4.15.4",
+    "autoprefixer": "^10.2.4",
+    "axios": "^0.21.1",
+    "formik": "^2.2.6",
+    "js-cookie": "^2.2.1",
+    "mobx": "^6.1.7",
+    "mobx-react-lite": "^3.2.0",
+    "next": "latest",
+    "postcss": "^8.2.6",
+    "qs": "^6.9.6",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-reactions": "^0.1.3",
+    "react-select": "^4.1.0",
+    "sass": "^1.32.8",
+    "stripe": "^8.137.0",
+    "swr": "^0.4.2",
+    "tailwindcss": "^2.0.3",
+    "typescript": "^4.1.5",
+    "yup": "^0.32.9"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "@testing-library/react-hooks": "^5.1.0",
+    "@types/node": "^14.14.31",
+    "@types/react": "^17.0.2",
+    "babel-jest": "^26.6.3",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^26.6.3"
+  }
+}
